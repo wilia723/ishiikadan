@@ -74,6 +74,7 @@ img {
 }
 
 .header__logo {
+  z-index: 2;
   margin-right: 1.5rem;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -83,9 +84,6 @@ img {
   .header__logo {
     margin-right: 5rem;
     margin-left: 2rem;
-  }
-  .header__logo.open {
-    z-index: 2;
   }
 }
 
