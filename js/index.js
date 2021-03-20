@@ -6,10 +6,6 @@ $(document).ready(function(){
       var logo = '.header__logo'
       var logo_white = "img/Hight_logo01.png";
       var logo_black = "img/Hight_logo02.png";
-      function addClass() {
-        
-      }
-
       if($(window).scrollTop() > 0){
         $('.header').addClass(scrolled);
         $('.header__title').addClass(scrolled);
@@ -32,8 +28,6 @@ $(document).ready(function(){
 
   //予約メニュー
   $(function(){
-    var heightSize = $(window).height();
-    
     function noScroll(event) {
       event.preventDefault();
     }
@@ -42,7 +36,6 @@ $(document).ready(function(){
       $('#rvlayer').addClass("active");
       document.addEventListener('touchmove', noScroll, { passive: false });
       document.addEventListener('mousewheel', noScroll, { passive: false });
-      $('#rvlayer' + '.active').height(heightSize);
     });
     $('.reservation__close, #rvlayer').on("click", function(){
       $('.reservation').css("display", "none");
@@ -58,7 +51,6 @@ $(document).ready(function(){
     var open = "open"
     var logo_white = "img/Hight_logo01.png";
     var logo_black = "img/Hight_logo02.png";
-    var heightSize = $(window).height();
     
     function noScroll(event) {
       event.preventDefault();
@@ -80,7 +72,6 @@ $(document).ready(function(){
         document.removeEventListener('touchmove', noScroll, { passive: false });
         document.removeEventListener('mousewheel', noScroll, { passive: false });
       }
-      $('#hglayer' + '.active').height(heightSize);
     }); 
   });
 
