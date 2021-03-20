@@ -50,6 +50,10 @@ $(document).ready(function(){
     var open = "open"
     var logo_white = "img/Hight_logo01.png";
     var logo_black = "img/Hight_logo02.png";
+    
+    function noScroll(event) {
+      event.preventDefault();
+    }
     $('#hamburger,#hglayer').on("click", function(){
       $('.global-nav').toggleClass(open);
       $('#hglayer').toggleClass("active");
@@ -60,12 +64,12 @@ $(document).ready(function(){
       }else if($(window).scrollTop() > 0) {
           $(logo).attr("src", logo_black);
       }
-    });
-    $('#hglayer').on("click", function(){
-      if($(window).scrollTop() > 0) {
-        $(logo).attr("src", logo_black);
+      if($('.global-nav').hasClass(open)) {
+        document.addEventListener('touchmove', noScroll, { passive: false });
+        document.addEventListener('mousewheel', noScroll, { passive: false });
       }else {
-        $(logo).attr("src", logo_white);
+        document.removeEventListener('touchmove', noScroll, { passive: false });
+        document.removeEventListener('mousewheel', noScroll, { passive: false });
       }
     });
   });
