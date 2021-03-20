@@ -432,14 +432,17 @@ img {
   opacity: 0.75;
 }
 
-#hglayer.active {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: block;
-  background-color: #060817;
-  z-index: 1;
+#hglayer {
+  display: none;
+  &.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    background-color: #060817;
+    z-index: 1;
+  }
 }
 
 #rvlayer.active {
