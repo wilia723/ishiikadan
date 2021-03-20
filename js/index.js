@@ -41,8 +41,6 @@ $(document).ready(function(){
       document.addEventListener('touchmove', noScroll, { passive: false });
       document.addEventListener('mousewheel', noScroll, { passive: false });
     });
-  });
-  $(function(){
     $('.reservation__close, #rvlayer').on("click", function(){
       $('.reservation').css("display", "none");
       $('#rvlayer').removeClass("active");
@@ -50,7 +48,7 @@ $(document).ready(function(){
       document.removeEventListener('mousewheel', noScroll, { passive: false });
     });
   });
-
+  
   //ハンバーガーメニュー
   $(function(){
     var logo = '.header__logo'
