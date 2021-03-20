@@ -42,14 +42,14 @@ $(document).ready(function(){
       $('#rvlayer').addClass("active");
       document.addEventListener('touchmove', noScroll, { passive: false });
       document.addEventListener('mousewheel', noScroll, { passive: false });
+      $('#rvlayer' + '.active').height(heightSize);
     });
     $('.reservation__close, #rvlayer').on("click", function(){
       $('.reservation').css("display", "none");
       $('#rvlayer').removeClass("active");
       document.removeEventListener('touchmove', noScroll, { passive: false });
       document.removeEventListener('mousewheel', noScroll, { passive: false });
-    });
-    $('#rvlayer' + '.active').height(heightSize); 
+    }); 
   });
   
   //ハンバーガーメニュー
@@ -80,8 +80,8 @@ $(document).ready(function(){
         document.removeEventListener('touchmove', noScroll, { passive: false });
         document.removeEventListener('mousewheel', noScroll, { passive: false });
       }
-    });
-    $('#hglayer' + '.active').height(heightSize); 
+      $('#hglayer' + '.active').height(heightSize);
+    }); 
   });
 
   //タブ
