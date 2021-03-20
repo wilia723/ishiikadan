@@ -60,6 +60,7 @@ $(document).ready(function(){
       $('#hglayer').toggleClass("active");
       $('.hamburger__line').toggleClass(open);
       $(logo).toggleClass(open);
+      $('#hglayer' + '.active').height(heightSize); 
       if($(logo).hasClass(open)) {
         $(logo).attr("src", logo_white);
       }else if($(window).scrollTop() > 0) {
@@ -72,7 +73,6 @@ $(document).ready(function(){
         document.removeEventListener('touchmove', noScroll, { passive: false });
         document.removeEventListener('mousewheel', noScroll, { passive: false });
       }
-      $('#hglayer' + '.active').height(heightSize); 
     });
   });
 
