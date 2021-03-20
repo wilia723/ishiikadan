@@ -434,31 +434,31 @@ img {
 
 #hglayer {
   display: none;
-  &.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 999px;
-    display: block;
-    background-color: #080d2f;
-    z-index: 1;
-  }
+}
+#hglayer.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 999px;
+  display: block;
+  background-color: #080d2f;
+  z-index: 1;
 }
 
 #rvlayer {
   display: none;
-  &.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 999px;
-    display: block;
-    background-color: #000;
-    opacity: .5;
-    z-index: 2;
-  }
+}
+#rvlayer.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 999px;
+  display: block;
+  background-color: #000;
+  opacity: .5;
+  z-index: 2;
 }
 
 .mv__img {
