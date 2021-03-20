@@ -55,7 +55,6 @@ $(document).ready(function(){
     var open = "open"
     var logo_white = "img/Hight_logo01.png";
     var logo_black = "img/Hight_logo02.png";
-    var heightSize = $(window).height();
     
     function noScroll(event) {
       event.preventDefault();
@@ -65,7 +64,6 @@ $(document).ready(function(){
       $('#hglayer').toggleClass("active");
       $('.hamburger__line').toggleClass(open);
       $(logo).toggleClass(open);
-      $('#hglayer' + '.active').height(heightSize); 
       if($(logo).hasClass(open)) {
         $(logo).attr("src", logo_white);
       }else if($(window).scrollTop() > 0) {
