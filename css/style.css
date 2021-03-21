@@ -330,7 +330,7 @@ img {
   .reservation {
     width: 90%;
     padding: 2rem;
-    top: 15%;
+    top: 10%;
   }
 }
 
@@ -401,8 +401,6 @@ img {
   display: inline-block;
   border: solid 1px #E7E7E7;
   font-size: 1.6rem;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
   text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -412,8 +410,6 @@ img {
 .form__select {
   display: block;
   font-size: 1.6rem;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
   width: 100%;
   border: solid 1px #E7E7E7;
   -webkit-appearance: none;
