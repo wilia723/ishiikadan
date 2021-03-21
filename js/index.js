@@ -28,13 +28,20 @@ $(document).ready(function(){
 
   //予約メニュー
   $(function(){
+    function noScroll(event) {
+      event.preventDefault();
+    }
     $('#reservation-btn').on("click", function(){
       $('.reservation').fadeIn();
       $('#rvlayer').addClass("active");
+      document.addEventListener('touchmove', noScroll, { passive: false });
+      document.addEventListener('mousewheel', noScroll, { passive: false });
     });
     $('.reservation__close, #rvlayer').on("click", function(){
       $('.reservation').css("display", "none");
       $('#rvlayer').removeClass("active");
+      document.removeEventListener('touchmove', noScroll, { passive: false });
+      document.removeEventListener('mousewheel', noScroll, { passive: false });
     }); 
   });
   
